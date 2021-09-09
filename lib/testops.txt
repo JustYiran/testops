@@ -1,0 +1,12 @@
+1.环境准备
+-jenkins.war  (建议下载war部署)
+-tomcat (8.5即可,不要下载最高/最新版本)
+-jdk (1.8即可)
+-git (使用的话，安装客户端就行)
+
+git客户端的安装和使用
+-安装
+-生成密钥
+ -生成全局变量--用户名   git config --global user.name "username"
+ -生成全局变量--邮箱 git config --global user.email "youremail@163.com"
+ -生成密钥 ssh-keygen -t rsa -C "youremail@163.com"

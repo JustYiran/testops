@@ -1,0 +1,78 @@
+loginPage:
+  - title: 登录失败
+    des: 登录的用例
+    cases:
+      - name: 打开登录页面
+        method: get_url
+        url: http://testingedu.com.cn:8000/Home/user/login.html
+
+      - name: 输入用户名
+        method: input
+        locator: //*[@id="username"]
+        value: 13800138006
+
+      - name: 输入密码
+        method: input
+        locator: //*[@id="password"]
+        value: 1234567
+
+      - name: 输入验证码
+        method: input
+        locator: //*[@id="verify_code"]
+        value: 1111
+
+      - name: 点击登录
+        method: click
+        locator: //a[@class="J-login-submit"]
+
+      - name: 等待2s
+        method: sleep
+        time: 2
+
+  - title: 登录成功
+    des: 登录的用例
+    cases:
+      - name: 打开登录页面
+        method: get_url
+        url: http://testingedu.com.cn:8000/Home/user/login.html
+
+      - name: 输入用户名
+        method: input
+        locator: //*[@id="username"]
+        value: 13800138006
+
+      - name: 输入密码
+        method: input
+        locator: //*[@id="password"]
+        value: 123456
+
+      - name: 输入验证码
+        method: input
+        locator: //*[@id="verify_code"]
+        value: 1111
+
+      - name: 点击登录
+        method: click
+        locator: //a[@class="J-login-submit"]
+
+      - name: 等待2s
+        method: sleep
+        time: 2
+
+searchPage:
+  - title: 搜索
+    des: 商品中心，搜索商品的用例，从用户中心首页搜索
+    cases:
+      - name: 进入个人首页
+        method: get_url
+        url: http://testingedu.com.cn:8000/index.php/Home/user/index.html
+
+      - name: 输入手机
+        method: input
+        locator: //*[@id="q"]
+        value: 手机
+
+      - name: 点击搜索
+        method: click
+        locator: //*[@id="sourch_form"]/a
+
